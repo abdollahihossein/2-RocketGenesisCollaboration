@@ -1,5 +1,7 @@
 "use strict";
 
+const cardStep1 = document.getElementById("card-Step1")
+
 let buildingType_select = document.getElementById("building-type");
 let buildingType =
     buildingType_select.options[buildingType_select.selectedIndex].value;
@@ -87,6 +89,7 @@ function calcInstallFee(totalPrice, installPercentFee) {
 
 // DISPLAY
 function resetForm() {
+    cardStep1.style.borderColor = "white"
     estimateNumElv_div.style.display = "none";
     estimateNumElv_div.querySelectorAll("div").forEach((el) => {
         el.querySelectorAll("input[type='number']").forEach((input) => {
@@ -210,6 +213,15 @@ buildingType_select.addEventListener("change", function () {
     if (buildingType == "---Select---") {
         resetForm();
     } else {
+        if (buildingType == "residential") {
+            cardStep1.style.borderColor = "#109af7"
+        }
+        else if (buildingType == "commercial") {
+            cardStep1.style.borderColor = "#fa7c7c"
+        }
+        else {
+            cardStep1.style.borderColor = "#b1b1b1"
+        }
         displayBuildingFields(buildingType);
         estimateNumElv_div.addEventListener("change", function () {
             if (!allBuildingFieldsCompleted(buildingType)) {

@@ -33,6 +33,9 @@
 			#topMain, h1, h2, h3, h4 {
 				font-family: 'Roboto', sans-serif;
 			}
+			#card-Step1 {
+  				border: medium solid white;
+			}
 		</style>
 	</head>
 
@@ -137,7 +140,7 @@
 					<form class="validate" id="quote-form">
 
 						<div class="select-building-type card card-default">
-							<div class="card-heading card-heading-transparent">
+							<div class="card-heading card-heading-transparent" id="card-Step1">
 								<label for="building-type" class="card-title"> 
 									<h3>
 										<span style="color:rgb(10, 101, 160); font-weight:bolder">STEP 1 |</span> Select Type of Building
@@ -344,38 +347,40 @@
 			</div>
 
 			<footer id="footer">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-8">
-							<h3 class="letter-spacing-1">WHY US?</h3>
-							<p>
-								We have the conviction that we create the most innovative and reliable products on the market. Contact us today for any questions you might have.
-							</p>
-							<h2>(418) 555-1234</h2>
-						</div>
-
-						<div class="col-md-4">
-							<h3 class="letter-spacing-1">KEEP IN TOUCH</h3>
-							<p>Subscribe to Our Newsletter to get Important News & Offers</p>
-							
-							<form id="subscribe-form" onsubmit="showPopup()">
-								<div class="input-group">
-									<span class="input-group-addon">
-										<i class="fa fa-envelope"></i>
-									</span>
-									<input type="email" id="email" name="email" class="form-control required" placeholder="Enter your Email">
-									<span class="input-group-btn">
-										<button class="btn btn-primary" type="submit">
-											Subscribe
-										</button>
-									</span>
-								</div>
-							</form>
-
+				<section style="background-color:#0a65a0;">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-8">
+								<h3 class="letter-spacing-1">WHY US?</h3>
+								<p>
+									We have the conviction that we create the most innovative and reliable products on the market. Contact us today for any questions you might have.
+								</p>
+								<h2>(418) 555-1234</h2>
+							</div>
+	
+							<div class="col-md-4">
+								<h3 class="letter-spacing-1">KEEP IN TOUCH</h3>
+								<p>Subscribe to Our Newsletter to get Important News & Offers</p>
+								
+								<form id="subscribe-form" onsubmit="showPopup()">
+									<div class="input-group">
+										<span class="input-group-addon">
+											<i class="fa fa-envelope"></i>
+										</span>
+										<input type="email" id="email" name="email" class="form-control required" placeholder="Enter your Email">
+										<span class="input-group-btn">
+											<button class="btn btn-primary" type="submit">
+												Subscribe
+											</button>
+										</span>
+									</div>
+								</form>
+	
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="copyright">
+				</section>
+				<div class="copyright" style="background-color:#06314e;">
 					<div class="container">
 						&copy; All Rights Reserved, Rocket Elevators <br>
 						Disclaimer: This website was developed for educational purpose only. 
