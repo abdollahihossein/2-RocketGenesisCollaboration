@@ -33,13 +33,17 @@
 		<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 		<style>
-			p {
+			#myTable, p {
 				font-family: 'Roboto Slab', serif;
 			}
 			#topMain, h1, h2, h3, h4 {
 				font-family: 'Roboto', sans-serif;
 			}
+			table.sortable th:not(.sorttable_sorted):not(.sorttable_sorted_reverse):not(.sorttable_nosort):after {
+				content: " \25B4\25BE" 
+			}
 		</style>
+		<script src="sorttable.js"></script>
 	</head>
 
 	<body class="smoothscroll enable-animation">
@@ -119,6 +123,7 @@
 
 			</div>
 			<!-- / TOP NAVIGATION -->
+
 
 			<!-- PAGE HEADER BREADCRUMBS -->
 			<section class="page-header page-header-xs parallax parallax-3" style="background-image:url('assets/images/rocketElevators/imgpattern2.jpg')">
@@ -369,7 +374,6 @@
 			<!-- /BUSINESS MODEL -->
 
 
-
 			<!-- PARALLAX -->
 			<section class="parallax parallax-2" style="background-image: url('assets/images/rocketElevators/homeSlider1.jpeg');">
 				<div class="overlay dark-7"></div>
@@ -457,23 +461,37 @@
 			<!-- TopRatedAgents -->
 			<section id="topRatedAgents">
 				<div class="container">
-					<h1 class="text-center">Top Rated Agents</h1>
-					<table id="myTable" class="table table-striped">
+					<h1 class="text-center">
+						<span style ="color:#0a65a0">T</span><span style ="color:#aa4545">o</span><span style ="color:#0a65a0">p</span>
+						<span style ="color:#aa4545">R</span><span style ="color:#0a65a0">a</span><span style ="color:#aa4545">t</span><span style ="color:#0a65a0">e</span><span style ="color:#aa4545">d</span>
+						<span style ="color:#0a65a0">A</span><span style ="color:#aa4545">g</span><span style ="color:#0a65a0">e</span><span style ="color:#aa4545">n</span><span style ="color:#0a65a0">t</span><span style ="color:#aa4545">s</span>
+					</h1>
+					<table id="myTable" class="table table-striped sortable">
 						<thead>
 							<tr>
-								<th>#</th>
+								<th class="sorttable_nosort">#</th>
 								<th>First Name</th>
-								<th>Last name</th>
-								<th>Rating</th>
-								<th>Fee</th>
+								<th class="sorttable_nosort">Last name</th>
+								<th class="sorttable_nosort">
+									Region
+									<select name="choice" id="choice">
+										<option value="all">--- All ---</option>
+										<option value="north">North</option>
+										<option value="east">East</option>
+										<option value="west">West</option>
+										<option value="south">South</option>                      
+									</select>  
+								</th>
+								<th class="sorttable_nosort">Rating</th>
+								<th class="sorttable_nosort">Fee</th>
 							</tr>
 						</thead>
-						<tbody id="myBody"></tbody>
+						<tbody id="tableBody"></tbody>
 					</table>
 				</div>
 			</section>
 			<!-- /TopRatedAgents -->
-			
+
 
 			<!-- MODAL -->
 			<div class="modal fade" id="subscribe-message" role="dialog">
@@ -560,6 +578,7 @@
 			</div>
 		</div><!-- /PRELOADER -->
 
+		
 		<!-- JAVASCRIPT FILES -->
 		<script>var plugin_path = 'assets/plugins/';</script>
 		<script src="assets/plugins/jquery/jquery-3.3.1.min.js"></script>
@@ -570,7 +589,7 @@
 
 		<!-- SCRIPT -->
 		<script src="assets/js/scripts.js"></script>
-		<script src="app.js"></script>
+		<script src="appget.js"></script>
 
 		<!-- OPEN MODALS SCRIPT -->
 		<script type="text/javascript">

@@ -33,24 +33,25 @@
 			#topMain, h1, h2, h3, h4 {
 				font-family: 'Roboto', sans-serif;
 			}
-			#card-Step1 {
-  				border: medium solid white;
-			}
 		</style>
 	</head>
 
 	<body class="smoothscroll enable-animation">
 
+		<!-- wrapper -->
 		<div id="wrapper">
 
+			<!-- TOP NAVIGATION -->
 			<div id="header" class="navbar-toggleable-md sticky header-md clearfix">
 				<header id="topNav">
 					<div class="container">
 
+						<!-- Mobile Menu Button -->
 						<button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
 							<i class="fa fa-bars"></i>
 						</button>
 
+						<!-- Logo -->
 						<a class="logo float-left" href="index.html">
 							<img src="assets/images/rocketElevators/rocketLogo.png" alt="" />
 						</a>
@@ -106,9 +107,13 @@
 						</div>
 					</div>
 				</header>
+				<!-- TOP NAV -->
 
 			</div>
+			<!-- / TOP NAVIGATION -->
 
+
+			<!-- PAGE HEADER BREADCRUMBS -->
 			<section class="page-header page-header-xs parallax parallax-3" style="background-image:url('assets/images/rocketElevators/imgpattern2.jpg')">
 				<div class="overlay dark-2"></div>
 				<div class="container">
@@ -119,7 +124,10 @@
 					</ol>
 				</div>
 			</section>
+			<!-- /PAGE HEADER BREADCRUMS -->
 
+
+			<!-- PARALLAX -->
 			<section class="parallax parallax-2" style="background-image: url('assets/images/rocketElevators/businessSince.jpeg');">
 				<div class="overlay dark-7"></div>
 				<div class="container">
@@ -134,7 +142,10 @@
 					</div>
 				</div>
 			</section>
+			<!-- /PARALLAX -->
 
+
+			<!-- QUOTE FORM -->
 			<section>
 				<div class="container">
 					<form class="validate" id="quote-form">
@@ -159,7 +170,7 @@
 
 						<div class="estimate-num-elv card card-default"  style="display: none;"> 
 							
-							<div class="card-heading step-description">
+							<div class="card-heading step-description" id="card-Step2">
 								<h3>
 									<span style="color:rgb(10, 101, 160); font-weight:bolder">STEP 2 |</span> Provide Building Information
 								</h3>
@@ -223,7 +234,7 @@
 						</div>
 
 						<div class="product-line card card-default" style="display: none;">
-							<div class="card-heading card-heading-transparent">
+							<div class="card-heading card-heading-transparent" id="card-Step3">
 								<h3><span style="color:rgb(10, 101, 160); font-weight:bolder">STEP 3 |</span> Select Product Line</h3>
 								<p style="margin-bottom: 0px;">* Excluding tax and offers (if applicable)</p>
 								<p style="color: rgb(170, 69, 69); display: none; margin-bottom: 0px;" id="warning">Complete Step 2 to Estimate Price</p> 
@@ -256,7 +267,7 @@
 						</div>
 
 						<div class="final-pricing-display card card-default" style="display: none;">
-							<div class="card-heading card-heading-transparent">
+							<div class="card-heading card-heading-transparent" id="card-Step4">
 								<h3><span style="color:rgb(10, 101, 160); font-weight:bolder">STEP 4 |</span> Estimated Pricing</h3>
 								<p style="margin-bottom: 0px;">* Excluding tax and offers (if applicable)</p>
 								<p style="color: rgb(170, 69, 69); display: none; margin-bottom: 0px;" id="warning">Complete Step 2 to Estimate Price</p> 
@@ -323,7 +334,10 @@
 					</form>
 				</div>
 			</section>
+			<!-- /QUOTE FORM -->
 
+
+			<!-- MODAL -->
 			<div class="modal fade" id="subscribe-message" role="dialog">
 				<div class="modal-dialog">				
 				<div class="modal-content">
@@ -345,7 +359,10 @@
 				
 				</div>
 			</div>
+			<!-- /MODAL -->
 
+
+			<!-- FOOTER -->
 			<footer id="footer">
 				<section style="background-color:#0a65a0;">
 					<div class="container">
@@ -388,27 +405,38 @@
 					</div>
 				</div>
 			</footer>
-		</div>
+			<!-- /FOOTER -->
 
+		</div>
+		<!-- /wrapper -->
+
+
+		<!-- SCROLL TO TOP -->
 		<a href="#" id="toTop"></a>
 
+
+		<!-- PRELOADER -->
 		<div id="preloader">
 			<div class="inner">
 				<span class="loader"></span>
 			</div>
-		</div>
+		</div><!-- /PRELOADER -->
 
+		<!-- JAVASCRIPT FILES -->
 		<script>var plugin_path = 'assets/plugins/';</script>
 		<script src="assets/plugins/jquery/jquery-3.3.1.min.js"></script>
 		<script src="assets/js/scripts.js"></script>
 		
+		<!-- REVOLUTION SLIDER -->
 		<script src="assets/plugins/slider.revolution/js/jquery.themepunch.tools.min.js"></script>
 		<script src="assets/plugins/slider.revolution/js/jquery.themepunch.revolution.min.js"></script>
 		<script src="assets/js/view/demo.revolution_slider.js"></script>
 
+		<!-- SCRIPT -->
 		<script src="assets/js/contact.js"></script>
     	<script src="quote.js"></script>
 
+		<!-- OPEN MODALS SCRIPT -->
 		<script type="text/javascript">
 			$("#subscribe-form").on("submit", function(e){
 				e.preventDefault();

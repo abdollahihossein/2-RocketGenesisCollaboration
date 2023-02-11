@@ -1,6 +1,9 @@
 "use strict";
 
 const cardStep1 = document.getElementById("card-Step1")
+const cardStep2 = document.getElementById("card-Step2")
+const cardStep3 = document.getElementById("card-Step3")
+const cardStep4 = document.getElementById("card-Step4")
 
 let buildingType_select = document.getElementById("building-type");
 let buildingType =
@@ -71,25 +74,29 @@ const installPercentFees = {
     excelium: 20,
 };
 
-// CALCULATIONS
+// CALCULATIONS for Residential
 function calcResidentialElev(numFloors, numApts) {
     const elevatorsRequired = Math.ceil(numApts / numFloors / 6)*Math.ceil(numFloors / 20);
     console.log(elevatorsRequired)
     return elevatorsRequired;
 }
+// CALCULATIONS for Commercial
 function calcCommercialElev(numFloors, maxOccupancy) {
     const elevatorsRequired = Math.ceil((maxOccupancy * numFloors) / 200)*Math.ceil(numFloors / 10);
     const freighElevatorsRequired = Math.ceil(numFloors / 10);
     return freighElevatorsRequired + elevatorsRequired;
 }
-
+// CALCULATIONS for Industrial
 function calcInstallFee(totalPrice, installPercentFee) {
     return (installPercentFee / 100) * totalPrice;
 }
 
 // DISPLAY
 function resetForm() {
-    cardStep1.style.borderColor = "white"
+    cardStep1.style.backgroundColor = ""
+    cardStep2.style.backgroundColor = ""
+    cardStep3.style.backgroundColor = ""
+    cardStep4.style.backgroundColor = ""
     estimateNumElv_div.style.display = "none";
     estimateNumElv_div.querySelectorAll("div").forEach((el) => {
         el.querySelectorAll("input[type='number']").forEach((input) => {
@@ -214,13 +221,22 @@ buildingType_select.addEventListener("change", function () {
         resetForm();
     } else {
         if (buildingType == "residential") {
-            cardStep1.style.borderColor = "#109af7"
+            cardStep1.style.backgroundColor = "#b3dffc"
+            cardStep2.style.backgroundColor = "#b3dffc"
+            cardStep3.style.backgroundColor = "#b3dffc"
+            cardStep4.style.backgroundColor = "#b3dffc"
         }
         else if (buildingType == "commercial") {
-            cardStep1.style.borderColor = "#fa7c7c"
+            cardStep1.style.backgroundColor = "#fdb5b5"
+            cardStep2.style.backgroundColor = "#fdb5b5"
+            cardStep3.style.backgroundColor = "#fdb5b5"
+            cardStep4.style.backgroundColor = "#fdb5b5"
         }
         else {
-            cardStep1.style.borderColor = "#b1b1b1"
+            cardStep1.style.backgroundColor = "#dfdfdf"
+            cardStep2.style.backgroundColor = "#dfdfdf"
+            cardStep3.style.backgroundColor = "#dfdfdf"
+            cardStep4.style.backgroundColor = "#dfdfdf"
         }
         displayBuildingFields(buildingType);
         estimateNumElv_div.addEventListener("change", function () {
